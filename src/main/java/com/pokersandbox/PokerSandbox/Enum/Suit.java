@@ -1,4 +1,4 @@
-package com.pokersandbox.PokerSandbox.Model;
+package com.pokersandbox.PokerSandbox.Enum;
 
 public enum Suit {
     HEART("Hearts"),

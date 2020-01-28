@@ -1,14 +1,12 @@
 package com.pokersandbox.PokerSandbox.Model;
 
-import com.pokersandbox.PokerSandbox.Model.Card;
-import com.pokersandbox.PokerSandbox.Model.Deck;
+import com.pokersandbox.PokerSandbox.Enum.Rank;
+import com.pokersandbox.PokerSandbox.Enum.Suit;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
 
 public class DeckTest {
     private Deck testDeck;

@@ -1,5 +1,8 @@
 package com.pokersandbox.PokerSandbox.Model;
 
+import com.pokersandbox.PokerSandbox.Enum.Rank;
+import com.pokersandbox.PokerSandbox.Enum.Suit;
+
 import java.util.*;
 
 /**
