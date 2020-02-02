@@ -117,3 +117,10 @@ fabric.properties
 *.DS_Store
 
 # End of https://www.gitignore.io/api/java,intellij
+
+#User added ignores
+*.iml
+.idea/
+.idea/*
+.DS_Store
+target/
