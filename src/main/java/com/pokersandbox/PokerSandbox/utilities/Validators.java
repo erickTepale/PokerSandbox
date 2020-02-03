@@ -1,10 +1,12 @@
 package com.pokersandbox.PokerSandbox.utilities;
 
-import com.pokersandbox.PokerSandbox.models.User;
-import com.pokersandbox.PokerSandbox.repositories.UserRepo;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.pokersandbox.PokerSandbox.models.dto.EmailValidatorAPI;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
+import java.util.Arrays;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -19,13 +21,30 @@ public class Validators {
 
         return matcher.matches();
     }
-    // CHecks to see if its a valid email
-    public static Boolean validateEmail(String email){
-        String regex = " ";
-        Pattern pattern = Pattern.compile(regex);
-        Matcher matcher = pattern.matcher(email);
+    /*
+        Check if emails valid
+        calls getValidatorResponse() to get response from API and returns the response Object
+     */
+    public static Boolean validateEmail(String email)  {
+        EmailValidatorAPI checkEmail = Validators.getValidatorReponse(email);
+        Boolean checker = false;
 
-        return matcher.matches();
+        if(checkEmail.getFormat_valid().equals(true) &&
+                checkEmail.getMx_found().equals(true) &&
+                checkEmail.getRole().equals(false) &&
+                checkEmail.getDisposable().equals(false))
+            checker = true;
+
+        return checker;
+    }
+
+    public static EmailValidatorAPI getValidatorReponse(String email){
+        final String url = "http://apilayer.net/api/check";
+        final String api_access_key = "569795e7bf983ba67cf50b1a6963da2a";
+
+        RestTemplate template = new RestTemplate();
+
+        return template.getForObject(url + "?access_key=" + api_access_key + "&email=" + email, EmailValidatorAPI.class);
     }
 
 }
