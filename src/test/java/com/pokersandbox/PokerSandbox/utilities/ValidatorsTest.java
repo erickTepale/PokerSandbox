@@ -8,6 +8,13 @@ public class ValidatorsTest {
 
     @Test
     public void validate_password_test(){
+        /*
+            password_1 contains only lowercase => fails
+            password_2 contains uppercase and lowercase => fails
+            password_3 contains uppercase, lowercase, and number => fails
+            password_4 contains uppercase, lowercase, number, and symbol => passes
+         */
+
         //given
         String password_1 = "chung";
         String password_2 = "Chung";
