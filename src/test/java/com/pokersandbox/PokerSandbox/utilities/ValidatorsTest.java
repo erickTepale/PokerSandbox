@@ -1,5 +1,6 @@
 package com.pokersandbox.PokerSandbox.utilities;
 
+import com.pokersandbox.PokerSandbox.models.dto.EmailValidatorAPI;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -27,5 +28,35 @@ public class ValidatorsTest {
         Assert.assertFalse(Validators.validatePassword(password_3));
 
         Assert.assertTrue(Validators.validatePassword(password_4));
+    }
+
+    @Test
+    public void validate_email_API_response_test(){
+        //checks if API returns a response
+
+        String email = "arguello.chung@gmail.com";
+        EmailValidatorAPI object = Validators.getValidatorReponse(email);
+
+        Assert.assertNotNull(object);
+    }
+
+    @Test
+    public void validate_email_test(){
+        /*
+            email_1 is a valid email passes
+            email_2 is a valid email passes
+            email_3 is not valid email fails
+         */
+
+        //given
+        String email_1 = "arguello.chung@gmail.com";
+        String email_2 = "arguello.chung.dev@gmail.com";
+        String email_3 = "chucv342csdvhgssfk@i434fsdfsd.com";
+
+        //then
+        Assert.assertTrue(Validators.validateEmail(email_1));
+        Assert.assertTrue(Validators.validateEmail(email_2));
+
+        Assert.assertFalse(Validators.validateEmail(email_3));
     }
 }
