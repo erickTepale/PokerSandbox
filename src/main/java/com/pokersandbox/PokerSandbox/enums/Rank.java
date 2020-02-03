@@ -1,4 +1,4 @@
-package com.pokersandbox.PokerSandbox.Enum;
+package com.pokersandbox.PokerSandbox.enums;
 
 public enum Rank {
         ACE(1,"A"), DEUCE(2, "Duece"), THREE(3, "Three"), FOUR(4, "Four"), FIVE(5, "Five"),

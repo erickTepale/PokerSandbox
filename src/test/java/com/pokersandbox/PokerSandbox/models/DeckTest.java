@@ -1,7 +1,7 @@
-package com.pokersandbox.PokerSandbox.Model;
+package com.pokersandbox.PokerSandbox.models;
 
-import com.pokersandbox.PokerSandbox.Enum.Rank;
-import com.pokersandbox.PokerSandbox.Enum.Suit;
+import com.pokersandbox.PokerSandbox.enums.Rank;
+import com.pokersandbox.PokerSandbox.enums.Suit;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
