@@ -1,12 +1,9 @@
 package com.pokersandbox.PokerSandbox.utilities;
 
 import com.pokersandbox.PokerSandbox.models.dto.EmailValidatorAPI;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import java.util.Arrays;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
