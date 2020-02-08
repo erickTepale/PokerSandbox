@@ -1,5 +1,6 @@
 package com.pokersandbox.PokerSandbox.services;
 
+import com.pokersandbox.PokerSandbox.models.Member;
 import com.pokersandbox.PokerSandbox.repositories.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.User;
@@ -19,8 +20,8 @@ public class MyUserDetailsService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         try{
-            com.pokersandbox.PokerSandbox.models.User user = userRepo.findByUsername(username);
-            return new User(user.getUsername(), user.getPassword(), new ArrayList<>());
+            Member member = userRepo.findByUsername(username);
+            return new User(member.getUsername(), member.getPassword(), new ArrayList<>());
         }catch(UsernameNotFoundException e){
             throw new UsernameNotFoundException("Username or password does not exist", e);
         }
