@@ -9,7 +9,7 @@ public class ValidatorsTest {
 
     @Test
     public void validate_password_test(){
-        /*
+        /**
             password_1 contains only lowercase => fails
             password_2 contains uppercase and lowercase => fails
             password_3 contains uppercase, lowercase, and number => fails
@@ -42,7 +42,7 @@ public class ValidatorsTest {
 
     @Test
     public void validate_email_test(){
-        /*
+        /**
             email_1 is a valid email passes
             email_2 is a valid email passes
             email_3 is not valid email fails
