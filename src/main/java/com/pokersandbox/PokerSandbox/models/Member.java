@@ -1,9 +1,6 @@
 package com.pokersandbox.PokerSandbox.models;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
 
@@ -13,11 +10,11 @@ public class Member {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    @NotNull
+    @Column(unique = true, nullable = false)
     private String username;
-    @NotNull
+    @Column(nullable = false)
     private String password;
-    @NotNull
+    @Column(unique = true, nullable = false)
     private String email;
     private Long post_count;
     private Long response_count;
