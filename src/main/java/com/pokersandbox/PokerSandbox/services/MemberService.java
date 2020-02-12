@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.util.Date;
+import java.util.Optional;
 
 @Service
 public class MemberService {
@@ -54,5 +55,13 @@ public class MemberService {
         }
 
         return "Account created";
+    }
+
+    /**
+     * GET methods for member
+     */
+    public Member getMemberById(Long id) {
+        Optional<Member> member = memberRepo.findById(id);
+        return member.orElse(null);
     }
 }
