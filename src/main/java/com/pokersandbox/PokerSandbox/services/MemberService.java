@@ -24,7 +24,10 @@ public class MemberService {
     }
 
     /**
-     * Register Method for new member with password validator.
+     * Register Method for new member
+     * password validation
+     * email validation
+     * username validation
      */
     public String registerMember(MemberRegister newMember) {
         Member member = new Member();
