@@ -1,6 +1,5 @@
 package com.pokersandbox.PokerSandbox.controllers;
 
-import com.pokersandbox.PokerSandbox.models.Member;
 import com.pokersandbox.PokerSandbox.models.dto.MemberRegister;
 import com.pokersandbox.PokerSandbox.services.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +12,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class MemberController {
 
-
     private MemberService memberService;
 
     @Autowired
@@ -21,8 +19,10 @@ public class MemberController {
         this.memberService = memberService;
     }
 
-    @PostMapping
+    @PostMapping("/member/register")
     public ResponseEntity<String> registerMember (@RequestBody MemberRegister newMember){
         return new ResponseEntity<>(memberService.registerMember(newMember), HttpStatus.CREATED);
     }
+
+
 }
