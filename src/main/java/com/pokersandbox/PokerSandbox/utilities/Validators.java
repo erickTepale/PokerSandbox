@@ -1,6 +1,6 @@
 package com.pokersandbox.PokerSandbox.utilities;
 
-import com.pokersandbox.PokerSandbox.models.dto.EmailValidatorAPI;
+import com.pokersandbox.PokerSandbox.models.dao.EmailValidatorAPI;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
