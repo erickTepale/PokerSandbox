@@ -1,7 +1,7 @@
 package com.pokersandbox.PokerSandbox.controllers;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.pokersandbox.PokerSandbox.models.dto.MemberRegister;
+import com.pokersandbox.PokerSandbox.models.dao.MemberRegister;
 import com.pokersandbox.PokerSandbox.services.MemberService;
 import org.junit.Before;
 import org.junit.Test;

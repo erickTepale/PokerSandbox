@@ -1,4 +1,4 @@
-package com.pokersandbox.PokerSandbox.models.dto;
+package com.pokersandbox.PokerSandbox.models.dao;
 
 public class EmailValidatorAPI {
     private String email;

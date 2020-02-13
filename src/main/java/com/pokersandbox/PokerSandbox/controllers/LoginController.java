@@ -1,7 +1,7 @@
 package com.pokersandbox.PokerSandbox.controllers;
 
-import com.pokersandbox.PokerSandbox.models.dto.AuthenticationRequest;
-import com.pokersandbox.PokerSandbox.models.dto.AuthenticationResponse;
+import com.pokersandbox.PokerSandbox.models.dao.AuthenticationRequest;
+import com.pokersandbox.PokerSandbox.models.dao.AuthenticationResponse;
 import com.pokersandbox.PokerSandbox.services.MyUserDetailsService;
 import com.pokersandbox.PokerSandbox.utilities.Jwt;
 import org.springframework.beans.factory.annotation.Autowired;
